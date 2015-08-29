@@ -1,19 +1,19 @@
 <?php
 	
 $labels = array(
-	'name' => _x( 'Cherry Offers', RCEV_TEXT_DOMAIN ),
-	'singular_name' => _x( 'Cherry Offer', RCEV_TEXT_DOMAIN ),
-	'add_new' => _x( 'Add New Offer', RCEV_TEXT_DOMAIN ),
-	'add_new_item' => _x( 'Add New Offer', RCEV_TEXT_DOMAIN ),
-	'edit_item' => _x( 'Edit Offer', RCEV_TEXT_DOMAIN ),
-	'new_item' => _x( 'New Offer', RCEV_TEXT_DOMAIN ),
-	'view_item' => _x( 'View Offer', RCEV_TEXT_DOMAIN ),
-	'search_items' => _x( 'Search Offer', RCEV_TEXT_DOMAIN ),
-	'not_found' => _x( 'No offer found', RCEV_TEXT_DOMAIN ),
-	'not_found_in_trash' => _x( 'No offer found in trash', RCEV_TEXT_DOMAIN ),
-	'parent_item_colon' => _x( 'Parent Offer:', RCEV_TEXT_DOMAIN ),
-	'all_items' => __( 'All Cherry Offers', RCEV_TEXT_DOMAIN ),
-	'menu_name' => _x( 'Cherry Offers', RCEV_TEXT_DOMAIN ),
+	'name' => _x( 'Cherry Offers', RCOF_TEXT_DOMAIN ),
+	'singular_name' => _x( 'Cherry Offer', RCOF_TEXT_DOMAIN ),
+	'add_new' => _x( 'Add New Offer', RCOF_TEXT_DOMAIN ),
+	'add_new_item' => _x( 'Add New Offer', RCOF_TEXT_DOMAIN ),
+	'edit_item' => _x( 'Edit Offer', RCOF_TEXT_DOMAIN ),
+	'new_item' => _x( 'New Offer', RCOF_TEXT_DOMAIN ),
+	'view_item' => _x( 'View Offer', RCOF_TEXT_DOMAIN ),
+	'search_items' => _x( 'Search Offer', RCOF_TEXT_DOMAIN ),
+	'not_found' => _x( 'No offer found', RCOF_TEXT_DOMAIN ),
+	'not_found_in_trash' => _x( 'No offer found in trash', RCOF_TEXT_DOMAIN ),
+	'parent_item_colon' => _x( 'Parent Offer:', RCOF_TEXT_DOMAIN ),
+	'all_items' => __( 'All Cherry Offers', RCOF_TEXT_DOMAIN ),
+	'menu_name' => _x( 'Cherry Offers', RCOF_TEXT_DOMAIN ),
 );
 
 $args = array(
@@ -35,4 +35,4 @@ $args = array(
 	'capability_type' => 'post'
 );
 
-register_post_type( RCEV_TEXT_DOMAIN, $args );
+register_post_type( RCOF_TEXT_DOMAIN, $args );

@@ -49,4 +49,4 @@ function RCOF_offers_list( $atts, $content ) {
 add_shortcode( 'RCOFList', 'RCOF_offers_list' );
 
 
-// usage [RCEVList]
+// usage [RCOFList]

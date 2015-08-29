@@ -18,7 +18,7 @@ define( 'RCOF_PLUGIN_URL' , plugin_dir_url( __FILE__ ) );
 define( 'RCOF_TEXT_DOMAIN', 'cherry-offers' );
 define( 'RCOF_SLUG',        'cherry-offers' );
 
-define( 'RCOF_SETTINGS_KEY', 'RCEV_Gallery_Settings_');
+define( 'RCOF_SETTINGS_KEY', 'RCOF_Gallery_Settings_');
 
 /*******************************************
 * Global Variables
