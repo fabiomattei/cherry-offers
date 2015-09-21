@@ -5,45 +5,65 @@
  */
 function RCOF_offers_list( $atts, $content ) {
 	global $post;
-	
+
 	$atts = array( // a few default values
 			'posts_per_page' => '3',
-			'post_type' => RCOF_SLUG
+			'post_type' => 'cherry-offers'
 			);
-			
+
 	$posts = new WP_Query( $atts );
-	$out = '';
-	
+	$out = '<div class="offers-maincontainer">
+				<h4>Special Offers</h4>';
+	$out = '<ul id="offers-container">';
+
     ob_start();
-	
+
+		$i = 1;
 	if ($posts->have_posts()) {
-		
+
 	    while ($posts->have_posts()) {
 	        $posts->the_post();
-			
-	        $out .= '<div class="offers_box">
-	            <h4><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h4>
-	            <p class="offer_desc">'.get_the_content().'</p>';
-	            // add here more...
-	        $out .= '</div>';
-			
+
+	        $out .= '<li id="#slide'.$i.'">';
+
+			$out .= '<div class="offer-box">
+				<div class="offer-thumbnail">'.get_the_post_thumbnail( $post_id, 'offer-img', array( 'class' => 'testimonal-thumb' ) ).'</div>
+	            <div class="offer-desc">
+					<h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5>
+				<p>'.get_the_content().'</p>
+				</div>
+				</div> <!-- .offer-box -->';
+
+	        $out .= '</li>';
+
+					$i++;
 	/* these arguments will be available from inside $content
-	    get_permalink()  
+	    get_permalink()
 	    get_the_content()
 	    get_the_category_list(', ')
 	    get_the_title()
 	    and custom fields
 	    get_post_meta($post->ID, 'field_name', true);
 	*/
-	
+
 		} // end while loop
-		
+
+		$out .= '</ul>
+			</div> <!-- .offers-container -->
+		<script type="text/javascript">
+jQuery( document ).ready(function( jQuery ) {
+	jQuery(\'#offers-container\').slippry({
+		adaptiveHeight: true,
+	});
+});
+</script>';
+
 	} else {
 		return; // no posts found
 	}
 
 	echo $out;
-	
+
     return ob_get_clean();
 }
 add_shortcode( 'RCOFList', 'RCOF_offers_list' );
