@@ -1,0 +1,19 @@
+
+ul#offers-container li {
+	align: center;
+}
+
+
+.offer-thumbnail {
+	max-width: 60%;
+	float: left;
+
+}
+
+.offer-desc {
+	max-width: 40%;
+	float: left;
+}
+
+.offer-thumb {
+}
