@@ -7,7 +7,7 @@ function RCOF_offers_list( $atts, $content ) {
 	global $post;
 
 	$atts = array( // a few default values
-			'posts_per_page' => '3',
+			'posts_per_page' => '2',
 			'post_type' => 'cherry-offers'
 			);
 
@@ -28,15 +28,15 @@ function RCOF_offers_list( $atts, $content ) {
 
 			$out .= '<div class="offer-box">
 				<div class="offer-thumbnail">'.get_the_post_thumbnail( $post_id, 'offer-img', array( 'class' => 'offer-thumb' ) ).'</div>
-	            <div class="offer-desc">
-					<h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5>
-				<p>'.get_the_content().'</p>
-				</div>
+	                <div class="offer-desc">
+				    	<h5><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h5>
+				    <p>'.get_the_content().'</p>
+				    </div> <!-- .offer-desc -->
 				</div> <!-- .offer-box -->';
 
 	        $out .= '</li>';
 
-					$i++;
+			$i++;
 	/* these arguments will be available from inside $content
 	    get_permalink()
 	    get_the_content()
@@ -49,7 +49,7 @@ function RCOF_offers_list( $atts, $content ) {
 		} // end while loop
 
 		$out .= '</ul>
-			</div> <!-- .offers-container -->
+		<!-- </div> non riesco a spiegare perché scompagina -->
 		<script type="text/javascript">
 jQuery( document ).ready(function( jQuery ) {
 	jQuery(\'#offers-container\').slippry({
