@@ -14,7 +14,7 @@ function RCOF_offers_list( $atts, $content ) {
 	$posts = new WP_Query( $atts );
 	$out = '<div class="offers-maincontainer">
 				<h4>Special Offers</h4>';
-	$out = '<ul id="offers-container">';
+	$out .= '<ul id="offers-container">';
 
     ob_start();
 
@@ -49,7 +49,7 @@ function RCOF_offers_list( $atts, $content ) {
 		} // end while loop
 
 		$out .= '</ul>
-		<!-- </div> non riesco a spiegare perché scompagina -->
+		</div>
 		<script type="text/javascript">
 jQuery( document ).ready(function( jQuery ) {
 	jQuery(\'#offers-container\').slippry({
