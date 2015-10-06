@@ -13,7 +13,9 @@ function RCOF_offers_list( $atts, $content ) {
 
 	$posts = new WP_Query( $atts );
 	$out = '<div class="offers-maincontainer">
-				<h4>Special Offers</h4>';
+				<div class="offerstitlewrapper">
+					<h4 class="offerstitle">Special Offers</h4>
+				</div>';
 	$out .= '<ul id="offers-container">';
 
     ob_start();
