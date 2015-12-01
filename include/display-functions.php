@@ -11,7 +11,7 @@ function RCOF_ShortCodeDetect() {
     $Posts = $wp_query->posts;
     $Pattern = get_shortcode_regex();
     foreach ($Posts as $Post) {
-		if ( strpos($Post->post_content, 'RCTEList' ) ) {
+		if ( strpos($Post->post_content, 'RCOFList' ) ) {
 			// loading css scripts
 			wp_enqueue_style('rcof-testimonialscss', RCOF_PLUGIN_URL.'css/rcoffers.css');
 			
