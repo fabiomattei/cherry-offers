@@ -12,11 +12,11 @@ function RCOF_offers_list( $atts, $content ) {
 			);
 
 	$posts = new WP_Query( $atts );
-	$out = '<div class="offers-maincontainer">
-				<div class="offerstitlewrapper">
-					<h4 class="offerstitle">Special Offers</h4>
+	$out = '<div class="external-post-slider-container">
+				<div class="post-slider-title-wrapper">
+					<h4 class="post-slider-title">Special Offers</h4>
 				</div>';
-	$out .= '<ul id="offers-container">';
+	$out .= '<ul id="post-slider-container">';
 
     ob_start();
 
@@ -28,37 +28,29 @@ function RCOF_offers_list( $atts, $content ) {
 
 	        $out .= '<li id="#slide'.$i.'">';
 
-			$out .= '<div class="offer-box">
-					<div class="offer-thumbnail offer-box-child">'.get_the_post_thumbnail( $post_id, 'offer-img', array( 'class' => 'offer-thumb' ) ).'</div>
-	                <div class="offer-desc offer-box-child">
+			$out .= '<div class="post-slider-box">
+					<div class="post-slider-box-child">'.get_the_post_thumbnail( $post_id, 'offer-img', array( 'class' => 'offer-thumb' ) ).'</div>
+	                <div class="post-slider-box-child">
 				    	<h6><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h6>
 				    <p>'.get_the_content().'</p>
-				    </div> <!-- .offer-desc -->
-				</div> <!-- .offer-box -->';
+				    </div> <!-- .post-slider-box-child -->
+				</div> <!-- .post-slider-box -->';
 
 	        $out .= '</li>';
 
 			$i++;
-	/* these arguments will be available from inside $content
-	    get_permalink()
-	    get_the_content()
-	    get_the_category_list(', ')
-	    get_the_title()
-	    and custom fields
-	    get_post_meta($post->ID, 'field_name', true);
-	*/
 
 		} // end while loop
 
 		$out .= '</ul>
 		</div>
 		<script type="text/javascript">
-jQuery( document ).ready(function( jQuery ) {
-	jQuery(\'#offers-container\').slippry({
-		adaptiveHeight: true,
-	});
-});
-</script>';
+		jQuery( document ).ready(function( jQuery ) {
+			jQuery(\'#post-slider-container\').slippry({
+				adaptiveHeight: true,
+			});
+		});
+		</script>';
 
 	} else {
 		return; // no posts found
@@ -68,7 +60,7 @@ jQuery( document ).ready(function( jQuery ) {
 
     return ob_get_clean();
 }
+
 add_shortcode( 'RCOFList', 'RCOF_offers_list' );
 
-
-// usage [RCOFList]
+// rename to RCPostSlider

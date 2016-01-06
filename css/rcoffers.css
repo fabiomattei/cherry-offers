@@ -1,0 +1,75 @@
+
+.post-slider-title-wrapper {
+	background-image: url("../img/dots.png");
+	background-repeat: repeat-x;
+	background-position: center;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+
+.post-slider-title {
+    display: inline;
+    text-align: center;
+    background-color: $beige1;
+    padding: 12px 30px;
+}
+
+ul#post-slider-container li {
+	align: center;
+}
+
+.post-slider-box {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+ 	-ms-flex-direction:     row;
+    flex-direction:         row;
+} 	
+
+.post-slider-box-child {
+	-webkit-justify-content: center;
+	-ms-flex-pack:           center;
+	justify-content:         center;
+	-webkit-flex: 1 1 100px;
+	-ms-flex: 1 1 100px;
+	flex: 1 1 100px;
+}
+
+.post-slider-box-child:first-child {
+	margin-left: 130px;
+	margin-right: 25px;
+}
+
+
+.post-slider-box-child:last-child {
+	margin-left: 25px;
+	margin-right: 130px;
+}
+
+.post-slider-box-child h6 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.post-slider-box-child h6 a {
+	color: $beige1 !important;
+	background-color: $gray3 !important;
+	text-decoration: none !important;
+}
+
+.post-slider-box-child h6 a:visited,
+.post-slider-box-child h6 a:hover,
+.post-slider-box-child h6 a:focus,
+.post-slider-box-child h6 a:active {
+	color: $green1 !important;
+}
+.post-slider-box-child h6 a:focus {
+	outline: thin dotted;
+}
+.post-slider-box-child h6 a:hover,
+.post-slider-box-child h6 a:active {
+	outline: 0;
+}
+
