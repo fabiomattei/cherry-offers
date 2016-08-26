@@ -29,7 +29,7 @@ function RCOF_offers_list( $atts, $content ) {
 	        $out .= '<li id="#slide'.$i.'">';
 
 			$out .= '<div class="post-slider-box">
-					<div class="post-slider-box-child">'.get_the_post_thumbnail( $post_id, 'offer-img', array( 'class' => 'offer-thumb' ) ).'</div>
+					<div class="post-slider-box-child">'.get_the_post_thumbnail( $post->ID, 'offer-img', array( 'class' => 'offer-thumb' ) ).'</div>
 	                <div class="post-slider-box-child">
 				    	<h6><a href="'.get_permalink().'" title="' . get_the_title() . '">'.get_the_title() .'</a></h6>
 				    <p>'.get_the_content().'</p>

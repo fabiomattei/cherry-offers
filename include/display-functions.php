@@ -14,11 +14,14 @@ function RCOF_ShortCodeDetect() {
 		if ( strpos($Post->post_content, 'RCOFList' ) ) {
 			// loading css scripts
 			wp_enqueue_style('rcof-testimonialscss', RCOF_PLUGIN_URL.'css/rcoffers.css');
-			
-			// loading slippry js scripts
-			wp_enqueue_script('rcof-slippry-javascript', RCOF_PLUGIN_URL.'lib/slippry/slippry.min.js', array('jquery'), '', true);
-			// loading slippry css scripts
-			wp_enqueue_style('rcof-slippry-css', RCOF_PLUGIN_URL.'lib/slippry/slippry.css');
+
+            // loading owl.carousel js scripts
+            wp_enqueue_script('rcte-carousel-javascript', RCOF_PLUGIN_URL.'vendors/owlcarousel/owl.carousel.min.js', array('jquery'), '', true);
+
+            // loading owl.carousel css scripts
+            wp_enqueue_style('rcte-carousel-css', RCOF_PLUGIN_URL.'vendors/owlcarousel/owl.carousel.css');
+            wp_enqueue_style('rcte-carousel-theme-css', RCOF_PLUGIN_URL.'vendors/owlcarousel/owl.theme.css');
+            wp_enqueue_style('rcte-carousel-transitions-css', RCOF_PLUGIN_URL.'vendors/owlcarousel/owl.transitions.css');
 
             break;
         } //end of if
